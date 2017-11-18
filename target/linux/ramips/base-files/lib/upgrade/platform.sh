@@ -265,6 +265,7 @@ platform_check_image() {
 		return 0
 		;;
 	hc5962|\
+	miwifi-r3|\
 	mir3g|\
 	r6220b|\
 	r6220a|\
@@ -311,6 +312,7 @@ platform_do_upgrade() {
 
 	case "$board" in
 	hc5962|\
+	miwifi-r3|\
 	mir3g|\
 	r6220b|\
 	r6220a|\

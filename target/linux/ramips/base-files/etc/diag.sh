@@ -193,6 +193,7 @@ get_status_led() {
 	m4-8M)
 		status_led="m4:blue:status"
 		;;
+	miwifi-r3|\
 	miwifi-mini|\
 	zte-q7)
 		status_led="$boardname:red:status"

@@ -1,0 +1,26 @@
+diff --git a/arch/arm/boot/dts/Makefile b/arch/arm/boot/dts/Makefile
+index da9b5c1..953d161 100644
+--- a/arch/arm/boot/dts/Makefile
++++ b/arch/arm/boot/dts/Makefile
+@@ -620,6 +620,7 @@ dtb-$(CONFIG_ARCH_QCOM) += \
+ 	qcom-ipq4019-ap.dk01.1-c1.dtb \
+ 	qcom-ipq4019-ap.dk04.1-c1.dtb \
+ 	qcom-ipq4019-fritz4040.dtb \
++	qcom-ipq4019-rt-acrh17.dtb \
+ 	qcom-ipq8064-ap148.dtb \
+ 	qcom-ipq8064-c2600.dtb \
+ 	qcom-ipq8064-d7800.dtb \
+diff --git a/drivers/mtd/ubi/build.c b/drivers/mtd/ubi/build.c
+index 2cd6487..57cf21f 100644
+--- a/drivers/mtd/ubi/build.c
++++ b/drivers/mtd/ubi/build.c
+@@ -1225,6 +1225,9 @@ static void __init ubi_auto_attach(void)
+ 	mtd = open_mtd_device("ubi");
+ 	if (IS_ERR(mtd))
+ 		mtd = open_mtd_device("data");
++	/* FIXME try "UBI_DEV" too */
++	if (IS_ERR(mtd))
++		mtd = open_mtd_device("UBI_DEV");
+ 
+ 	if (!IS_ERR(mtd)) {
+ 		size_t len;

@@ -117,6 +117,7 @@ case "$FIRMWARE" in
 	qcom,ap-dk01.1-c1)
 		ath10kcal_extract "ART" 4096 12064
 		;;
+	asus,rt-acrh17|\
 	asus,rt-ac58u)
 		CI_UBIPART=UBI_DEV
 		ath10kcal_ubi_extract "Factory" 4096 12064
@@ -167,6 +168,14 @@ case "$FIRMWARE" in
 	compex,wpj428 |\
 	openmesh,a42)
 		ath10kcal_extract "0:ART" 20480 12064
+		;;
+	esac
+	;;
+"ath10k/pre-cal-pci-0000:01:00.0.bin")
+	case "$board" in
+	asus,rt-acrh17)
+		CI_UBIPART=UBI_DEV
+		ath10kcal_ubi_extract "Factory" 36864 12064
 		;;
 	esac
 	;;

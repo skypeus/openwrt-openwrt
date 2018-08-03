@@ -156,6 +156,7 @@ platform_check_image() {
 	tew-691gr|\
 	tew-692gr|\
 	tew-714tru|\
+	tempe,t-br010|\
 	timecloud|\
 	tiny-ac|\
 	u25awf-h1|\

@@ -442,6 +442,13 @@ define Device/phicomm_k2g
 endef
 TARGET_DEVICES += phicomm_k2g
 
+define Device/tempe_t-br010
+  DTS := T-BR010
+  DEVICE_TITLE := TEMPE T-BR010
+  DEVICE_PACKAGES := kmod-mt76x2
+endef
+TARGET_DEVICES += tempe_t-br010
+
 define Device/rp-n53
   DTS := RP-N53
   DEVICE_TITLE := Asus RP-N53

@@ -404,6 +404,9 @@ tew-714tru)
 	set_usb_led "$boardname:red:usb"
 	set_wifi_led "$boardname:green:wifi"
 	;;
+tempe,t-br010)
+	ucidef_set_led_default "power" "power" "$boardname:blue:power" "1"
+	;;
 tiny-ac)
 	set_wifi_led "$boardname:orange:wifi"
 	set_usb_led "$boardname:green:usb"

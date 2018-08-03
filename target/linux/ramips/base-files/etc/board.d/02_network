@@ -345,6 +345,10 @@ ramips_setup_interfaces()
 		ucidef_add_switch "switch0" \
 			"1:lan" "2:lan" "3:lan" "4:lan" "5:wan" "0@eth0"
 		;;
+	tempe,t-br010)
+		ucidef_add_switch "switch0" \
+			"0:lan" "5:wan" "6@eth0"
+		;;
 	br-6478ac-v2|\
 	tplink,c2-v1)
 		ucidef_add_switch "switch1" \
